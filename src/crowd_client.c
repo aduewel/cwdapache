@@ -526,6 +526,7 @@ static int crowd_request(const request_rec *r, const crowd_config *config, bool 
     if (success) {
         if (curl_easy_setopt(curl_easy, CURLOPT_HEADERFUNCTION, write_crowd_response_header)
             || curl_easy_setopt(curl_easy, CURLOPT_WRITEHEADER, &write_data)
+            || curl_easy_setopt(curl_easy, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1)
             || curl_easy_setopt(curl_easy, CURLOPT_WRITEFUNCTION, write_response)
             || curl_easy_setopt(curl_easy, CURLOPT_WRITEDATA, &write_data)
             || curl_easy_setopt(curl_easy, CURLOPT_URL, url)
