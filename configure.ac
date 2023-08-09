@@ -1,4 +1,4 @@
-AC_INIT([mod_authnz_crowd], m4_esyscmd([2.4]), [support@atlassian.com])
+AC_INIT([mod_authnz_crowd], [2.4])
 AM_INIT_AUTOMAKE([-Wall foreign])
 AC_PROG_CC
 AC_PROG_LIBTOOL
